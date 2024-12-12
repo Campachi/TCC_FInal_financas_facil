@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Finanças Fácil</title>
+    <link rel="stylesheet" href="../css/configuracao.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logotip" src="../logotipo.png.png" alt="Logotipo">
+            <ul class="nav-links">
+                <li><a href="pagina_inicial.html">Início</a></li>
+                <li><a href="../php/historico.php">Histórico</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Opções</a>
+                    <div class="dropdown-content">
+                        <a href="../php/perfil.php">Perfil</a>
+                        <a href="configuracao.html">Configurações</a>
+                        <a href="login.html">Sair</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="settings-page">
+        <h1>Configurações do Usuário</h1>
+        <div class="settings-info">
+            <p>Bem-vindo à sua área de configurações. Aqui você pode excluir sua conta.</p>
+        </div>
+        <div class="settings-actions">
+            <form id="deleteForm" action="../php/excluir_conta.php" method="post" onsubmit="return confirmDelete()">
+                <button type="submit" class="button delete-button">Excluir Conta</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Finanças Fácil. Todos os direitos reservados.</p>
+        <p>Siga nossas redes sociais</p>
+        <div class="social-media">
+            <a href="https://facebook.com/financafacil" target="_blank" class="facebook"><img src="../facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com/financafacil" target="_blank" class="social-icon"><img src="../instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script>
+        function confirmDelete() {
+            return confirm("Tem certeza de que deseja excluir sua conta? Esta ação não pode ser desfeita.");
+        }
+    </script>
+</body>
+</html>

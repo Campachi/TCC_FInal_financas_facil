@@ -1,0 +1,340 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Variáveis de cores e tamanhos */
+:root {
+    --primary-color: #2a9fff;
+    --accent-color: rgb(0, 255, 255);
+    --dark-bg: #000000;
+    --hover-bg: #333333;
+    --text-light: #ffffff;
+    --spacing-default: 10px;
+}
+
+/* Reset de estilos e definição da fonte */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: #ffffff; /* Cor de fundo neutra */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333; /* Cor do texto mais escura para melhor legibilidade */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--primary-color);
+    border-bottom: 10px solid var(--dark-bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logotip {
+    width: 180px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+    margin-left: 2rem;
+}
+
+.tit_senha
+ {
+   margin-right: 10%;
+    
+ }
+ .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000000;
+    border-radius: 5px;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a, 
+.dropdown-content a,
+.dropdown {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--spacing-default);
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown responsivo */
+.dropdown-content {
+    position: absolute;
+    background-color: var(--dark-bg);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,238,255,0.2);
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Estilos para a busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 7%;
+    margin-right: 2%;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #000000; /* Cor da borda do campo de busca */
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #1c86ee; /* Cor da borda ao focar no campo de busca */
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #000000; /* Cor do botão de busca */
+    color: rgb(0, 247, 255); /* Cor do texto do botão de busca */
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    margin-left: 10px; /* Espaço entre o campo de busca e o botão */
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #333333; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 60px 20px; /* Espaçamento vertical */
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold; /* Peso de fonte em negrito */
+}
+
+.main-content p {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculator-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.calculator-form fieldset {
+    background-color: #e3f2fd; /* Azul claro */
+    border: 3px solid #0288d1; /* Azul médio para a borda */
+    border-radius: 8px; /* Arredondamento das bordas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Margem superior e inferior */
+    font-weight: bold;
+}
+
+.calculator-form legend {
+    font-size: 24px;
+    color: #01579b; /* Azul escuro para o texto do legend */
+    font-weight: bold;
+}
+
+.calculator-form label {
+    display: block;
+    font-size: 16px;
+    color: #000000;
+    margin: 10px 0 5px;
+    font-weight: bold; /* Adiciona negrito ao texto do label */
+}
+
+.calculator-form input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.calculator-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0fdfff;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calculator-form button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #048aff; /* Cor do rodapé */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid black; /* Linha no topo do rodapé */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400; /* Peso de fonte regular */
+}
+
+/* Estilos para os ícones de redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espaço acima dos ícones */
+}
+
+.social-media a {
+    margin: 0 15px; /* Espaço entre os ícones */
+}
+
+.social-media img {
+    width: 40px; /* Tamanho dos ícones */
+    height: 40px; /* Altura dos ícones */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease; /* Transição ao passar o mouse */
+    border-radius: 50%; /* Torna a imagem circular */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .logotip {
+        width: 150px;
+        margin-left: 0;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .profile-section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .profile-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .profile-table th {
+        width: 40%;
+    }
+
+    .update-button {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 900px) {
+
+    .calculator-form {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .calculator-form input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+    .main-content p {
+        font-size: 16px;
+    }
+
+    .calculator-form legend {
+        font-size: 20px;
+    }
+
+    .calculator-form fieldset {
+        padding: 15px;
+    }
+
+    .social-media img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-media a {
+        margin: 0 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logotip {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main-content {
+        padding: 30px 10px;
+    }
+
+    .calculator-form button {
+        width: 100%;
+    }
+}

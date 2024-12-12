@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Finanças</title>   
+    <link rel="stylesheet" href="../css/calculo.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img class="logotip" src="../logotipo.png.png" alt="Logotipo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="pagina_inicial.html">Início</a></li>
+                <li><a href="../php/historico.php">Histórico</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">opções</a>
+                    <div class="dropdown-content">
+                        <a href="../php/perfil.php">Perfil</a>
+                        <a href="configuraçao.html">Configurações</a>
+                        <a href="login.html">Sair</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Calculadora de Finanças</h1>
+        <p>Insira suas despesas e salário para calcular seu balanço mensal.</p>
+        <form class="calculator-form" action="../php/dados_calculo.php" method="POST">
+             <fieldset class="fieldset">
+                <legend>Dados do Mês</legend>
+                
+                <label for="salario">Salário Mensal:</label>
+                <input type="number" id="salario" name="salario" placeholder="R$ 0,00" required>
+                
+                <label for="agua">Água:</label>
+                <input type="number" id="agua" name="agua" placeholder="R$ 0,00">
+                
+                <label for="energia">Energia:</label>
+                <input type="number" id="energia" name="energia" placeholder="R$ 0,00">
+                
+                <label for="mercado">Mercado:</label>
+                <input type="number" id="mercado" name="mercado" placeholder="R$ 0,00">
+                
+                <label for="prestacoes_veiculares">Prestações Veiculares:</label>
+                <input type="number" id="prestacoes_veiculares" name="prestacoes_veiculares" placeholder="R$ 0,00">
+                
+                <label for="gas">Gás:</label>
+                <input type="number" id="gas" name="gas" placeholder="R$ 0,00">
+                
+                <label for="condominio">Condomínio:</label>
+                <input type="number" id="condominio" name="condominio" placeholder="R$ 0,00">
+                
+                <label for="internet">Internet:</label>
+                <input type="number" id="internet" name="internet" placeholder="R$ 0,00">
+                
+                <label for="dividas">Dívidas:</label>
+                <input type="number" id="dividas" name="dividas" placeholder="R$ 0,00">
+                
+                <label for="outras_despesas">Outras Despesas:</label>
+                <input type="number" id="outras_despesas" name="outras_despesas" placeholder="R$ 0,00">
+                
+                <label for="percapita">Número de Pessoas na Casa:</label>
+                <input type="number" id="percapita" name="percapita" value="1" min="1" required>
+                
+                <label for="data">Data do Cálculo:</label>
+                <input type="date" id="data" name="data" value="<?= date('Y-m-d') ?>" required>
+                
+                <button type="submit" class="button">Calcular</button><br>
+            </fieldset>
+        </form>
+        
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Finança Fácil. Todos os direitos reservados.</p>
+        <p>Siga nossas redes sociais</p>
+        <div class="social-media">
+            <a href="https://facebook.com/financafacil" target="_blank" class="facebook"><img src="../facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/financasfacil67/" target="_blank" class="social-icon"><img src="../instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>

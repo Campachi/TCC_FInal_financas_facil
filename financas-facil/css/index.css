@@ -1,0 +1,345 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Reset de estilos e definição da fonte */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: #ffffff; /* Cor de fundo neutra */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333; /* Cor do texto mais escura para melhor legibilidade */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    border-bottom: 10px solid #000000; /* Adiciona borda preta na parte inferior do cabeçalho */
+    padding: -7% 0; /* Reduzido para um espaço interno menor */
+    padding-bottom: 1%;
+}
+
+
+
+.logotip {
+    width: 250px;
+    height: 250px; /* Mantém a proporção da imagem */
+    padding: 1%;
+    margin-left: 45%;
+
+}
+ .tit_senha
+ {
+   margin-right: 10%;
+    
+ }
+ .nav-links {
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-left: 40%; /* Alinha à direita */
+    margin-top: 0%;
+}
+
+.nav-links li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0;
+}
+
+.nav-links a {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333333; /* Cor escura ao passar o mouse */
+}
+
+/* Estilos para o dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000; /* Cor de fundo para o conteúdo dropdown */
+    box-shadow: 0px 8px 16px rgb(0, 238, 255);
+    border-radius: 5px;
+    top: 100%; /* Posiciona o dropdown abaixo do item do menu */
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    z-index: 1; /* Garante que o dropdown esteja acima dos outros elementos */
+}
+
+.dropdown-content a {
+    color: #ffffff; /* Cor dos itens do dropdown */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000; /* Cor de fundo ao passar o mouse */
+    color: #0ffffb;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Estilo do título principal */
+.main-content h1 {
+    font-size: 48px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: 500; /* Peso de fonte para destaque */
+}
+
+/* Estilo dos parágrafos na seção principal */
+.main-content p {
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo para a tabela de salários */
+.table-container {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f9f9f9; /* Cor de fundo suave para a tabela */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaçamento entre bordas */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Borda leve para as células */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4ea9ff; /* Cor de fundo para os cabeçalhos */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffffff; /* Cor de fundo das células */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo alternada para linhas */
+}
+
+tr:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para a seção de Destaques */
+.features {
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin: 20px 0;
+}
+
+.feature h3 {
+    font-size: 24px;
+    color: #4ea9ff;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Botão */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #4ea9ff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #00fad9;
+}
+
+/* Estilo para a seção de Testemunhos */
+.testimonials {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    display: block;
+    font-size: 16px;
+    color: #4ea9ff;
+}
+
+/* Estilo para a seção de Contato */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #41a0ff;
+    border-bottom: 5px solid #000000; /* Adiciona borda preta na parte inferior do cabeçalho */
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #333333;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #2a9fff; /* Cor vibrante para o rodapé */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #000000; /* Borda preta na parte superior do rodapé */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo das logos das redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px; /* Espaço entre os ícones */
+}
+.facebook{
+    border-radius: 50%;
+}
+.social-media img {
+    width: 32px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+}

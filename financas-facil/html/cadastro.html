@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div class="login-screen">
+    <div class="vectorcomp-image">
+      <img src="logotipo.png.png" alt="Imagem de Cadastro">
+    </div>
+    <div class="login-container">
+      <h1 class="login-container-title">CADASTRO</h1>
+      <form action="../php/cadastro.php" method="post" class="login-form">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="username">Email</label>
+          <input type="email" id="username" name="username" placeholder="Digite seu email" required>
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input type="number" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Número de Telefone</label>
+          <input type="number" id="phone" name="phone" placeholder="Digite seu telefone" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirmar Senha</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" required>
+        </div>
+        <button type="submit" class="login-button">CADASTRAR</button>
+        <div class="sign-up">
+          <span class="no-have-a-account">Já tem uma conta?</span>
+          <a href="login.html" class="sign-up-button">Fazer Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

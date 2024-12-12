@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+  
+    background-size: 100% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #a0ceff;
+}
+
+.login-screen {
+    display: flex;
+    width: 900px;
+    height: 700px; /* Aumentado para 700px para mais altura */
+    background-color: #ffffff; /* Cor clara para o fundo do formulário */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vectorcomp-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #45e9ff, #1100ff); /* Gradiente de azul claro para azul diamante */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.vectorcomp-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Remova o border-radius aqui, pois a imagem já deve seguir o contorno do container */
+}
+
+.login-container {
+    flex: 1;
+    background-color: #ffffff; /* Cor clara para o fundo do formulário */
+    padding: 20px; /* Aumentado para mais espaço interno */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que o conteúdo não saia do container */
+}
+
+.login-container-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #333333; /* Cor escura para o título */
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333333; /* Cor escura para os labels */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db; /* Borda cinza clara */
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.login-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: #0077ff; /* Cor vibrante para o botão */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #357abd; /* Cor mais escura para o efeito de hover */
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #007bff; /* Cor do link */
+    font-size: 12px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.sign-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.no-have-a-account {
+    font-size: 14px;
+    color: #333333; /* Cor escura para o texto */
+}
+
+.sign-up-button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #d0e1ff; /* Cor suave para o botão de cadastro */
+    border: 1px solid #4a90e2; /* Borda colorida para contraste */
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sign-up-button:hover {
+    background-color: #4a90e2;
+    color: white;
+    border: 1px solid transparent;
+}
+
+@media (max-width: 900px) {
+    .login-screen {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .vectorcomp-image {
+        display: none;
+    }
+    
+    .login-container {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+}
